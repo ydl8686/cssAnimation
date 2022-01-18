@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bg-attachment滚动视差</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .container {
+    width: 100vw;
+    /* overflow-x: hidden;
+    overflow: hidden; */
+  }
+  .container div {
+    height: 60vh;
+    background-color: rgb(207, 140, 140);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="image" style="background-image: url('https://ydl8023.oss-cn-beijing.aliyuncs.com/4378AF62-F384-4169-AF14-A9F1958710DF.png');">IMG1</div>
+    <div>CONTENT1</div>
+    <div class="image" style="background-image: url('https://ydl8023.oss-cn-beijing.aliyuncs.com/IMG_0382.JPG');">IMG2</div>
+    <div>CONTENT2</div>
+    <div class="image" style="background-image: url('https://ydl8023.oss-cn-beijing.aliyuncs.com/IMG_0383.JPG');">IMG3</div>
+    <div>FOOTER</div>
+  </div>
+</body>
+</html>

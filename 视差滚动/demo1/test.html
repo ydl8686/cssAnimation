@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS3D实现滚动视差</title>
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* 实现视差滚动主要是看这三个 */
+  .shell {
+    height: 100vh;
+    overflow-x: hidden;
+    perspective: 3px;
+  }
+  .heading {
+    z-index: -1;
+    transform: translateY(-30vh) translateZ(1px);
+    color: #fff;
+    font-size: 30px;
+  }
+  .image {
+    /* 三维坐标系中z轴方向-1，scale为1.6可以还原成原来的大小 */
+    transform: translateZ(-1px) scale(1.6);
+    background-size: cover;
+    height: 100vh;
+    z-index: -1;
+  }
+
+
+  .shell div{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: 30px;
+    letter-spacing: 2px;
+  }
+  
+  .text {
+    height: 50vh;
+    background-color: #fff;
+  }
+  .text h1 {
+    color: #000;
+  }
+  
+</style>
+<body>
+  <div class="shell">
+    <div class="image" style="background-image: url('https://ydl8023.oss-cn-beijing.aliyuncs.com/4378AF62-F384-4169-AF14-A9F1958710DF.png');"></div>
+    <div class="heading">
+      <h1>「国王排名」</h1>
+    </div>
+    <div class="text">
+      <h1>波吉与卡克的人生从此发生了巨变</h1>
+    </div>
+    <div class="image" style="background-image: url('https://ydl8023.oss-cn-beijing.aliyuncs.com/IMG_0382.JPG');"></div>
+    <div class="heading">
+      <h1>「约定的梦幻岛」</h1>
+    </div>
+    <div class="text">
+      <h1>约定好了，要一起逃出去</h1>
+    </div>
+
+    <div class="image" style="background-image: url('https://ydl8023.oss-cn-beijing.aliyuncs.com/IMG_0383.JPG');"></div>
+    <div class="heading">
+      <h1>「鬼灭之刃」</h1>
+    </div>
+    <div class="text">
+      <h1>为了妹妹而战</h1>
+    </div>
+
+    <div class="image" style="background-image: url('https://ydl8023.oss-cn-beijing.aliyuncs.com/IMG_0384.JPG');"></div>
+    <div class="heading">
+      <h1>「咒术回战」</h1>
+    </div>
+    <div class="text">
+      <h1>同是打心底嘲笑过小鬼的人，一次姑且饶过你，但再无下次</h1>
+    </div>
+  </div>
+</body>
+</html>
